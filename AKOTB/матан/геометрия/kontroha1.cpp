@@ -8,7 +8,7 @@ namespace math {
     }
     double mpoluperimetr(double P) {
         const double res = P / 2;
-        std::cout << "p = Pîñí. / 2 = " << P << " / " << 2 << " = " << res << " ñì" << std::endl;
+        std::cout << "p = PÐ¾ÑÐ½. / 2 = " << P << " / " << 2 << " = " << res << " ÑÐ¼" << std::endl;
         return res;
     }
 
@@ -21,20 +21,20 @@ namespace math {
     }
     double mgeron(double P, double a, double b, double c) {
         double ger = geron(P, a, b, c);
-        // ëàäíî, çàäîëáàëà Ñ++ std::cout è std::cin, âûáåñèëè ìåíÿ
-        std::printf("Sîñí = ?p(p - a)(p - b)(p - c) = ?%g(%g - %g)(%g - %g)(%g - %g) = %g ñì2 \n", P, P, a, P, b, P, c, ger);
+        // Ð»Ð°Ð´Ð½Ð¾, Ð·Ð°Ð´Ð¾Ð»Ð±Ð°Ð»Ð° Ð¡++ std::cout Ð¸ std::cin, Ð²Ñ‹Ð±ÐµÑÐ¸Ð»Ð¸ Ð¼ÐµÐ½Ñ
+        std::printf("SÐ¾ÑÐ½ = âˆšp(p - a)(p - b)(p - c) = âˆš%g(%g - %g)(%g - %g)(%g - %g) = %g ÑÐ¼2 \n", P, P, a, P, b, P, c, ger);
         return ger;
     }
 
     namespace prisma {
-        // P îñí.
+        // P Ð¾ÑÐ½.
         double POsn(double a, double b, double c) {
             return a + b + c;
         }
 
         double mPOsn(double a, double b, double c) {
             const double res = POsn(a, b, c);
-            std::cout << "Pîñí. = AB + BC + AC = " << a << " + " << b << " + " << c << " = " << res << " ñì" << std::endl;
+            std::cout << "PÐ¾ÑÐ½. = AB + BC + AC = " << a << " + " << b << " + " << c << " = " << res << " ÑÐ¼" << std::endl;
             return res;
         }
 
@@ -44,7 +44,7 @@ namespace math {
 
         double mSbok(double P, double h) {
             const double res = Sbok(P, h);
-            std::cout << "Sáîê = Pîñí * AA1 = " << P << " * " << h << " = " << res << " ñì2" << std::endl; 
+            std::cout << "SÐ±Ð¾Ðº = PÐ¾ÑÐ½ * AA1 = " << P << " * " << h << " = " << res << " ÑÐ¼2" << std::endl; 
             return res;
         }
 
@@ -58,7 +58,7 @@ namespace math {
 
         double mSpoln(double Sbok, double Sosn) {
             double res = Spoln(Sbok, Sosn);
-            std::cout << "Sïîëí = Sáîê + 2 * Sîñí = " << Sbok << " + 2 * " << Sosn << " = " << res  << " ñì2" << std::endl;
+            std::cout << "SÐ¿Ð¾Ð»Ð½ = SÐ±Ð¾Ðº + 2 * SÐ¾ÑÐ½ = " << Sbok << " + 2 * " << Sosn << " = " << res  << " ÑÐ¼2" << std::endl;
             return res;
         }
 
@@ -67,7 +67,7 @@ namespace math {
         }
         double mV(double Sosn, double h) {
             double res = v(Sosn, h);
-            std::printf("V = Sîñí. * H = %g * %g = %g ñì3\n", Sosn, h, res);
+            std::printf("V = SÐ¾ÑÐ½. * H = %g * %g = %g ÑÐ¼3\n", Sosn, h, res);
             return res;
         }
 
@@ -76,25 +76,25 @@ namespace math {
         };
 
         void get_prisma(treug_prisma* prisma) {
-            std::cout << "Ââåäèòå AB: ";
+            std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ AB: ";
             std::cin >> prisma->a;
-            std::cout << "Ââåäèòå BC: ";
+            std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ BC: ";
             std::cin >> prisma->b;
-            std::cout << "Ââåäèòå AC: ";
+            std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ AC: ";
             std::cin >> prisma->c;
-            std::cout << "Ââåäèòå AA1(âûñîòó): ";
+            std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ AA1(Ð²Ñ‹ÑÐ¾Ñ‚Ñƒ): ";
             std::cin >> prisma->h;
         }
 
         void print_prisma(const treug_prisma& prisma) {
-            std::cout << "AB = " << prisma.a << " ñì"<< std::endl
-            << "AC = "   << prisma.b << " ñì" << std::endl
-            << "BC = "   << prisma.c << " ñì" << std::endl
-            << "AA1 = "  << prisma.h << " ñì" << std::endl;
+            std::cout << "AB = " << prisma.a << " ÑÐ¼"<< std::endl
+            << "AC = "   << prisma.b << " ÑÐ¼" << std::endl
+            << "BC = "   << prisma.c << " ÑÐ¼" << std::endl
+            << "AA1 = "  << prisma.h << " ÑÐ¼" << std::endl;
         }
 
 
-        // ëåíü. Òðåóãîëüíèêîâ õâàòèò
+        // Ð»ÐµÐ½ÑŒ. Ð¢Ñ€ÐµÑƒÐ³Ð¾Ð»ÑŒÐ½Ð¸ÐºÐ¾Ð² Ñ…Ð²Ð°Ñ‚Ð¸Ñ‚
         struct chetireh_prisma {
             double a, b, c, d, h;
         };
@@ -106,16 +106,24 @@ namespace resheniya {
         math::prisma::treug_prisma prisma{a, b, c, h};
         math::prisma::get_prisma(&prisma);
 
-        std::cout << "Ðåøåíèå Sáîê: \n";
+        std::cout << "Ð ÐµÑˆÐµÐ½Ð¸Ðµ SÐ±Ð¾Ðº: \n";
         double Posn = math::prisma::mPOsn(prisma.a, prisma.b, prisma.c);
         double Sbok = math::prisma::mSbok(Posn, prisma.h);
-        std::cout << "Ðåøåíèå Sïîëí: \n";
+        std::cout << "Ð ÐµÑˆÐµÐ½Ð¸Ðµ SÐ¿Ð¾Ð»Ð½: \n";
         double Sosn = math::mgeron(math::mpoluperimetr(Posn), prisma.a, prisma.b, prisma.c);
         double mSpoln = math::prisma::mSpoln(Sbok, Sosn);
-        std::cout << "Ðåøåíèå V: \n";
+        std::cout << "Ð ÐµÑˆÐµÐ½Ð¸Ðµ V: \n";
         double v = math::prisma::mV(Sosn, prisma.h);
     }
 };
+
+int main() {
+    setlocale(LC_ALL, "Rus");
+    resheniya::reshit_prisma_treug(1.5, 2.5, 3, 2.5);
+    return 0;
+}
+
+
 
 int main() {
     setlocale(LC_ALL, "Rus");
